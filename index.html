@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Blind Spot</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main class="container">
+    <header class="hero">
+      <div class="badge">AI • CRITICAL THINKING</div>
+      <h1>The Blind <span>Spot</span></h1>
+      <p>Same decision. A wider view.</p>
+    </header>
+
+    <section class="card intro">
+      <h2>See what your reasoning might be missing.</h2>
+      <p>
+        Describe a decision and the reasons behind it. The AI will help you
+        examine assumptions, overlooked factors, and useful questions — without
+        making the decision for you.
+      </p>
+    </section>
+
+    <section class="card">
+      <label for="decision">What decision are you considering?</label>
+      <textarea id="decision" rows="3"
+        placeholder="Example: Should I accept a 6-month internship?"></textarea>
+
+      <label for="reasoning">What factors are influencing your decision?</label>
+      <textarea id="reasoning" rows="5"
+        placeholder="Example: The stipend is good, the company is close to home, and I will get industry experience."></textarea>
+
+      <div class="actions">
+        <button id="exampleBtn" class="secondary">Try Example</button>
+        <button id="analyzeBtn" class="primary">Analyze My Blind Spots →</button>
+      </div>
+      <p id="status" class="status"></p>
+    </section>
+
+    <section id="results" class="results hidden">
+      <div class="result-card summary">
+        <h3>What you're focusing on</h3>
+        <p id="summary"></p>
+      </div>
+
+      <div class="grid">
+        <div class="result-card">
+          <h3>⚠ Potential Blind Spots</h3>
+          <ul id="blind_spots"></ul>
+        </div>
+        <div class="result-card">
+          <h3>💭 Assumptions</h3>
+          <ul id="assumptions"></ul>
+        </div>
+        <div class="result-card">
+          <h3>❓ Questions to Explore</h3>
+          <ul id="questions"></ul>
+        </div>
+        <div class="result-card">
+          <h3>↔ Possible Conflicts</h3>
+          <ul id="conflicts"></ul>
+        </div>
+        <div class="result-card full">
+          <h3>🔎 Information to Verify</h3>
+          <ul id="verify"></ul>
+        </div>
+      </div>
+
+      <div class="disclaimer">
+        <strong>Remember:</strong> The Blind Spot does not make the decision for
+        you. It helps you think through the decision from a wider perspective.
+      </div>
+    </section>
+
+    <footer>
+      <p>The Blind Spot • Built for Hack2Skill</p>
+    </footer>
+  </main>
+  <script src="/static/script.js"></script>
+</body>
+</html>
